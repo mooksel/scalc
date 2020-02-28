@@ -51,7 +51,7 @@ class LoadFromFileExpression(Expression):
                 return self._parse_set_or_raise(f.readlines())
         except FileNotFoundError:
             raise RuntimeException(
-                reason=f"File: '{self.file_name}' not found.",
+                reason=f"File '{self.file_name}' not found.",
             )
 
 

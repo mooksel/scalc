@@ -1,4 +1,4 @@
-import typing as t
+import sys
 
 from scalc.expressions import Expression
 from scalc.tokens import TokenParser
@@ -9,9 +9,17 @@ from scalc.functions import load_functions, SetCalcFunc
 
 
 if __name__ == "__main__":
-    source_str = "[ SUM [ DIF a.txt b.txt c.txt ] [ INT b.txt c.txt ] ]"
-    token_parser = TokenParser(source_str=source_str)
+    if len(sys.argv) != 2:
+        print(
+            "Invalid arguments. Programm expects exactly one argument."
+            "\nExample usage: python -m scalc \"[SUM a.txt b.txt]\"."
+        )
+        exit(0)
+
+    source_str = sys.argv[1]
+
     try:
+        token_parser = TokenParser(source_str=source_str)
         tokens = token_parser.parse()
         functions_mapping = load_functions()
         compiler = Compiler(
