@@ -24,7 +24,7 @@ class TokenParser:
     def __init__(self, source_str: str):
         self._source_str = source_str
         self._func_name_re_pattern = re.compile(r"^[A-Z][A-Z_]*$")
-        self._file_name_re_pattern = re.compile(r"^[a-z][a-z0-9_\.]*$")
+        self._file_name_re_pattern = re.compile(r"^[a-z][a-z0-9_\./]*$")
 
     @property
     def source_str(self) -> str:

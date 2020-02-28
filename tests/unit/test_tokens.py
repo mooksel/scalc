@@ -20,6 +20,7 @@ _VALID_FILE_NAME_TOKEN_VALUES = (
     "a888",
     "some_very_very_long_file_name.very_long_file_extension",
     "a",
+    "some/path/to/file.txt",
 )
 
 _VALID_TOKEN_VALUES = (

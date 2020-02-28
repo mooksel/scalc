@@ -59,7 +59,7 @@
 
 ## Limitations:
 
-- File names should match regex: `^[a-z][a-z0-9_\.]*$`
+- File names should match regex: `^[a-z][a-z0-9_\./]*$`
 - In case if you would to implement new functions, all functions names should match regex: `^[A-Z][A-Z_]*$`
 
 -----
